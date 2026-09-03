@@ -251,11 +251,8 @@ input { max-width:100%; }
     <section class="signup" id="newsletter">
       <h2>The first collection is taking shape.</h2>
       <p>Join our mailing list for the first look and studio updates.</p>
-      <form id="signup-form">
-        <input id="email" type="email" autocomplete="email" placeholder="Your email" required>
-        <button class="button" type="submit">Join the list</button>
-      </form>
-      <div class="form-message" id="form-message" aria-live="polite"></div>
+
+      <script async data-uid="6c66e88bcc" src="https://the-interlude-state.kit.com/6c66e88bcc/index.js"></script>
     </section>
   </div>
 </section>
@@ -287,18 +284,6 @@ input { max-width:100%; }
     toggle.textContent = 'Menu';
   }));
 
-  document.getElementById('signup-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const email = document.getElementById('email');
-    const msg = document.getElementById('form-message');
-    if (!email.checkValidity()) {
-      msg.textContent = 'Please enter a valid email address.';
-      email.focus();
-      return;
-    }
-    msg.textContent = 'Thank you — you’re on the list.';
-    email.value = '';
-  });
 </script>
 </body>
 </html>
