@@ -102,7 +102,11 @@
     .wrap { width:min(100% - 34px, 700px); }
     header { height:72px; }
     nav { display:none; }
-    .mobile-toggle { display:block; border:0; background:none; font:11px var(--sans); text-transform:uppercase; letter-spacing:.08em; cursor:pointer; }
+    .mobile-toggle {
+      display:block; appearance:none; -webkit-appearance:none;
+      border:0; background:none; color:var(--ink); -webkit-text-fill-color:var(--ink);
+      font:11px var(--sans); text-transform:uppercase; letter-spacing:.08em; cursor:pointer;
+    }
     header.open nav {
       display:flex; position:absolute; top:72px; left:0; right:0; z-index:10;
       background:var(--paper); padding:20px 24px; border-bottom:1px solid var(--rule);
